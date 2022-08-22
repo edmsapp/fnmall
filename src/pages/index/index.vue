@@ -55,6 +55,7 @@
 <script>
 import Footer from "../../components/Footer"
 import { reactive, onMounted } from 'vue';
+import { useUserStore } from "src/stores/userUserStore";
 
 export default {
   name: 'Index',
@@ -112,26 +113,17 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-  #nut-swiper-item {
-    line-height: 150px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-</style>
 <style lang="scss">
-$primary-color: #4C926B;
+@import '../../assets/styles/custom_theme.scss';
 
 .index {
-  background-color: #f7f8fa;
+  background-color: $help-color;
   min-height: 50rem;
   text-align: left;
   padding: 1rem;
 }
 .block {
-  border: 1px solid #3db66f;
+  border: 1px solid $primary-color;
   border-radius: 0.6rem;
   box-shadow: 0 0.1rem 0.3rem 0 rgba(145, 209, 146, 0.2);
 }
@@ -159,12 +151,12 @@ $primary-color: #4C926B;
 }
 .special {
   height: 17.5rem;
-  width: 47%;
+  width: 44%;
   background-color: #ffffff;
   border: 1px solid #3db66f;
   border-radius: 0.6rem;
-  box-shadow: 0 0.1rem 0.3rem 0 rgba(145, 209, 146, 0.2);
-  margin: 0.5rem;
+  // box-shadow: 0 0.1rem 0.3rem 0 rgba(145, 209, 146, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
   padding: 0.5rem;
 }
 .title {
